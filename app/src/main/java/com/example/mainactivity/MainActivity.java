@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Arithmetic testArithmetic = new Arithmetic();
+        TaxArithmetic testTax = new TaxArithmetic();
         System.out.println(testArithmetic);
+        System.out.println(testTax.calculateTax(10.75, 8.5));
     }
 }

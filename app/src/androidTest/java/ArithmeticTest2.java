@@ -1,18 +1,18 @@
 import com.example.mainactivity.Arithmetic;
+import com.example.mainactivity.TaxArithmetic;
 
 import junit.framework.TestCase;
 
-/**
- * Created by wdumas on 2/24/2015.
- */
+
 public class ArithmeticTest2 extends TestCase {
 
     Arithmetic a;
-
+    TaxArithmetic b;
     @Override
     public void setUp()throws Exception{
         super.setUp();
         a = new Arithmetic(5, 10);
+        b = new TaxArithmetic(5,10);
     }
 
     public void testArithmeticAdd() {
@@ -31,7 +31,9 @@ public class ArithmeticTest2 extends TestCase {
         System.out.println(a.divide());
         assertEquals(a.divide(), 0.5);
     }
-
+    public void testTaxCalculate() {
+        assertEquals(TaxArithmetic.add(1,2), 3);
+    }
     @Override
     public void tearDown() throws Exception{
         super.tearDown();
